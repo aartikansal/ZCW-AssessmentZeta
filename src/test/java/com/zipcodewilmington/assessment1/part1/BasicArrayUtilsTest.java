@@ -15,8 +15,8 @@ public class BasicArrayUtilsTest {
         
         // When
 
-        String actual = BasicArrayUtils.getFirstElement(inputArray); 
-        
+        String actual = BasicArrayUtils.getFirstElement(inputArray);
+        System.out.println("The final value  in getFirstElementTest is -->"+actual);
         // Then
         Assert.assertEquals(expected, actual);
     }
@@ -29,6 +29,7 @@ public class BasicArrayUtilsTest {
 
         // When
         String actual = BasicArrayUtils.getSecondElement(inputArray);
+        System.out.println("The final value  in getSecondTest is -->"+actual);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -42,6 +43,7 @@ public class BasicArrayUtilsTest {
 
         // When
         String actual = BasicArrayUtils.getLastElement(inputArray);
+        System.out.println("The final value  in getLastElementTest is -->"+actual);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -55,6 +57,7 @@ public class BasicArrayUtilsTest {
 
         // When
         String actual = BasicArrayUtils.getSecondToLastElement(inputArray);
+        System.out.println("The final value  in getSecondToLastElementTest is -->"+actual);
 
         // Then
         Assert.assertEquals(expected, actual);

@@ -15,7 +15,7 @@ public class BasicStringUtilsTest {
 
         // When
         String actual = BasicStringUtils.camelCase(input);
-
+        System.out.println("The final value in camelCaseTest is -->"+actual);
         // Then
         Assert.assertEquals(expected, actual);
     }
@@ -56,7 +56,7 @@ public class BasicStringUtilsTest {
 
         // When
         String actual = BasicStringUtils.removeFirstAndLastCharacter(input);
-
+        System.out.println("The final value in removeFirstAndLastCharacterTest is -->"+actual);
         // Then
         Assert.assertEquals(expected, actual);
     }
@@ -69,6 +69,7 @@ public class BasicStringUtilsTest {
 
         // When
         String actual = BasicStringUtils.invertCasing(input);
+        System.out.println("The final value in invertCasingTest1 is -->"+actual);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -81,6 +82,7 @@ public class BasicStringUtilsTest {
 
         // When
         String actual = BasicStringUtils.invertCasing(BasicStringUtils.invertCasing(expected));
+        System.out.println("The final value in invertCasingTest2 is -->"+actual);
 
         // Then
         Assert.assertEquals(expected, actual);

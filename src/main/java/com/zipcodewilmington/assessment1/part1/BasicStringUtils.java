@@ -15,9 +15,7 @@ public class BasicStringUtils {
      */
     public static String camelCase(String str) {
         str = str.substring(0, 1).toUpperCase() + str.substring(1);
-
         System.out.println(" The camelCase string  is -->" + str);
-
         return str;
     }
 
@@ -64,8 +62,11 @@ public class BasicStringUtils {
      * @param str a string input from user
      * @return string with identical contents excluding first and last character
      */
-    public static String removeFirstAndLastCharacter(String str) {
-        return null;
+    public static String removeFirstAndLastCharacter(String str)
+    {
+        String str1 = str.substring(1,str.length()-1);
+        System.out.println("In the function str is -->"+str1);
+        return str1;
     }
 
 

@@ -15,7 +15,7 @@ public class IntegerUtilsTest {
 
         // : When
         Integer actual = IntegerUtils.getSumOfN(input);
-
+        System.out.println("The getSUmTest final is -->"+actual);
         // : Then
         Assert.assertEquals(expected, actual);
     }
@@ -28,6 +28,8 @@ public class IntegerUtilsTest {
 
         // : When
         Integer actual = IntegerUtils.getProductOfN(input);
+        System.out.println("The testGetProduct final is -->"+actual);
+
 
         // : Then
         Assert.assertEquals(expected, actual);
@@ -41,6 +43,7 @@ public class IntegerUtilsTest {
 
         // : When
         Integer actual = IntegerUtils.reverseDigits(input);
+        System.out.println("The reverseDigitsTest final is -->"+actual);
 
         // : Then
         Assert.assertEquals(expected, actual);

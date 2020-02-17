@@ -8,9 +8,8 @@ public class BasicArrayUtils {
      * @param stringArray an array of String objects
      * @return the first element in the array
      */
-    public static String getFirstElement(String[] stringArray) {
-
-
+    public static String getFirstElement(String[] stringArray)
+    {
         return  stringArray[0];
     }
 
@@ -18,7 +17,8 @@ public class BasicArrayUtils {
      * @param stringArray an array of String objects
      * @return the second element in the array
      */
-    public static String getSecondElement(String[] stringArray) {
+    public static String getSecondElement(String[] stringArray)
+    {
 
         return stringArray[1];
     }

@@ -14,15 +14,16 @@ public class RockPaperSissorsEvaluator {
      */
     public String getWinningMove(String handSign) {
 
-              return  null;
+              return  handSign;
     }
 
     /**
      * @param handSign a string representative of a hand sign
      * @return the respective losing move
      */
-    public String getLosingMove(String handSign) {
-        return null;
+    public String getLosingMove(String handSign)
+    {
+        return handSign;
     }
 
     /**
@@ -30,7 +31,8 @@ public class RockPaperSissorsEvaluator {
      * @param handSignOfPlayer2 a string representative of a hand sign of a challenger
      * @return a string representative of the winning hand sign between the two players
      */
-    public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2) {
+    public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2)
+    {
         return null;
     }
 }

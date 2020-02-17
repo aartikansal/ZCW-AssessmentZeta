@@ -38,8 +38,14 @@ public class IntegerArrayUtils<getAverage> {
      */
     public static Double getAverage(Integer[] intArray) {
 
-
-        return null;
+        Double Sum = 0.0;
+        int noOfElements=intArray.length;
+        for (int i = 0; i < intArray.length; i++) {
+            Sum += intArray[i];
+        }
+        Sum=Sum/noOfElements;
+        System.out.println("The final value is -->"+Sum);
+        return Sum;
 
     }
 }
