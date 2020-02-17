@@ -7,13 +7,21 @@ public class ArrayUtils {
     /**
      * @param objectArray   an array of any type of Object
      * @param objectToCount any non-primitive value
-     * @return the number of times the specified `value` occurs in the specified `objectArray`
-     * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
+     * @return
      */
-    public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
-    }
+    public static int getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
 
+        int counter=0;
+        for (int i = 0; i < objectArray.length; i++) {
+
+            if (objectArray[i] == objectToCount) {
+                counter = counter + 1;
+            }
+        }
+return counter;
+
+
+    }
     /**
      * @param objectArray    an array of any type of Object
      * @param objectToRemove a value to be removed from the `objectArray`
@@ -21,7 +29,21 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        Object result = "";
+        System.out.println("Value to remove is -->"+objectToRemove);
+        for (int i = 0; i <objectArray.length; i++)
+        {
+
+            if (objectArray[i].equals(objectToRemove))
+            { System.out.println("in IF the value  to remove is -->"+objectToRemove);
+
+                result=objectArray[i];
+
+            }
+        }
+
+        return objectArray;
+
     }
 
     /**
@@ -30,8 +52,30 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
-    }
+
+
+
+            int count = 0;
+            int bigCount = 10;
+
+            for (int i=0; i < objectArray.length; i++) {
+                for (int j=0; j < objectArray.length; j++) {
+                    if(objectArray[j] == objectArray[i]) {
+                        count++;
+                    }
+                }
+                if(count > bigCount) {
+                    bigCount = count;
+                    objectArray[i] = bigCount;
+                }
+            }
+            return objectArray;
+        }
+
+
+
+
+
 
 
     /**
