@@ -14,6 +14,7 @@ public class BasicArrayUtilsTest {
         String expected = "The";
         
         // When
+
         String actual = BasicArrayUtils.getFirstElement(inputArray); 
         
         // Then
