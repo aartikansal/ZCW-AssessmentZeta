@@ -72,7 +72,7 @@ public class StringUtilsTest {
 
         // When
         String actual = StringUtils.removeCharacterAtIndex(inputString, characterIndex);
-
+        System.out.println(" The final string  is -->" + actual);
         // Then
         Assert.assertEquals(expected, actual);
     }

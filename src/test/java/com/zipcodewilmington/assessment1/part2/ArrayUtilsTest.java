@@ -17,7 +17,7 @@ public class ArrayUtilsTest {
 
         // When
         Integer actual = ArrayUtils.getNumberOfOccurrences(inputArray, valueToEvaluate);
-
+        System.out.println("The final value getNumberOfOccurrencesTest1 is --> "+actual);
         // Then
         Assert.assertEquals(expected, actual);
     }
