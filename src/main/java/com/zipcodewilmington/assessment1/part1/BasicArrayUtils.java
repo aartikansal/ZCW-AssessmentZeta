@@ -10,6 +10,8 @@ public class BasicArrayUtils {
      */
     public static String getFirstElement(String[] stringArray)
     {
+            //If(stringArray.length==0)return null;
+
         return  stringArray[0];
     }
 
@@ -19,7 +21,7 @@ public class BasicArrayUtils {
      */
     public static String getSecondElement(String[] stringArray)
     {
-
+  //if(stringArray.length<2)return null
         return stringArray[1];
     }
 

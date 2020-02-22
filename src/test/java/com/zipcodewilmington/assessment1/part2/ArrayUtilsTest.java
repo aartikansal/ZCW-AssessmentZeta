@@ -4,6 +4,8 @@ import com.zipcodewilmington.assessment1.UnitTestingUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -27,11 +29,11 @@ public class ArrayUtilsTest {
         // Given
         Integer valueToRemove = 7;
         Integer[] expected = {1, 2, 8, 4, 5, 0, 9, 8};
-        Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
+        Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8,7};
 
         // When
         Integer[] actual = (Integer[]) ArrayUtils.removeValue(inputArray, valueToRemove);
-
+        System.out.println("expected   is -->"+ Arrays.toString(expected));
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);
     }
