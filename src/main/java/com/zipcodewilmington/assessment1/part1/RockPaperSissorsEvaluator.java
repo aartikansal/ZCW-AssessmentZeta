@@ -4,6 +4,11 @@ package com.zipcodewilmington.assessment1.part1;
  * Created by leon on 2/16/18.
  */
 public class RockPaperSissorsEvaluator {
+
+    public RockPaperSissorsEvaluator()
+    {
+
+    }
     protected static final String ROCK = "rock";
     protected static final String PAPER = "paper";
     protected static final String SCISSOR = "scissor";
@@ -12,12 +17,10 @@ public class RockPaperSissorsEvaluator {
      * @param handSign a string representative of a hand sign
      * @return the respective winning move
      */
-    public String getWinningMove(String handSign) {
+    public String getWinningMove(String handSign)
+    {
       if(handSign.equals (ROCK))  return  PAPER;
       if(handSign.equals (PAPER)) return SCISSOR;
-      
-
-
               return  handSign;
     }
 
@@ -27,6 +30,8 @@ public class RockPaperSissorsEvaluator {
      */
     public String getLosingMove(String handSign)
     {
+        if(handSign.equals(ROCK)) return SCISSOR;
+        if(handSign.equals(PAPER)) return ROCK;
         return handSign;
     }
 
@@ -37,6 +42,9 @@ public class RockPaperSissorsEvaluator {
      */
     public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2)
     {
-        return null;
+        if(handSignOfPlayer1.equals(ROCK) && handSignOfPlayer2.equals(SCISSOR)) {
+            return handSignOfPlayer1;
+        }
+        return handSignOfPlayer2;
     }
 }

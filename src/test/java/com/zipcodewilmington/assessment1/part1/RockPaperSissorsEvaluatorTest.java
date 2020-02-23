@@ -30,7 +30,7 @@ public class RockPaperSissorsEvaluatorTest {
 
         // When
         String actual = rps.getLosingMove(input);
-
+        //System.out.println("winner is -->"+actual);
         // Then
         Assert.assertEquals(expected, actual);
     }
@@ -45,6 +45,7 @@ public class RockPaperSissorsEvaluatorTest {
 
         // When
         String actual = rps.getWinner(input1, input2);
+       // System.out.println("winner is -->"+actual);
 
         // Then
         Assert.assertEquals(expected, actual);

@@ -13,49 +13,33 @@ public class ArrayUtils {
      */
     public static int getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
 
-        int counter=0;
+        int counter = 0;
         for (int i = 0; i < objectArray.length; i++) {
 
             if (objectArray[i] == objectToCount) {
                 counter = counter + 1;
             }
         }
-return counter;
+        return counter;
 
 
     }
+
     /**
      * @param objectArray    an array of any type of Object
      * @param objectToRemove a value to be removed from the `objectArray`
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove)
-    {
-        //Object[] result = new Object[objectArray.length];
-        //System.out.println("Value to remove is -->"+objectToRemove);
-       // int j=0;
-        //int count =0;
-        for (int i = 0; i <objectArray.length; i++)
-        {
-            if (objectArray[i].equals(objectToRemove))
-            {
-                System.out.println("in i  is -->"+i);
-                System.out.println("in IF the value  of objectArray  is -->"+objectArray[i]);
-                System.out.println("in IF the value  to remove is -->"+objectToRemove);
-                for(int j=i; j<objectArray.length-1; j++)
-                {
-                    objectArray[j] = objectArray[j+1];
-                }
-                //count++;
-                System.out.println("objectArray  in IF  is -->"+ Arrays.toString(objectArray));
-
-                //break;
+    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
+        int counter = 0;
+        for (int i = 0; i < objectArray.length ; i++) {
+            if (objectArray[i] != objectToRemove){
+                objectArray[counter++] = objectArray[i];
             }
-           // System.out.println("Result is -->"+objectArray.toString());
         }
-        System.out.println("objectArray   is -->"+ Arrays.toString(objectArray));
-        return objectArray;
+        return Arrays.copyOf(objectArray, counter);
+
 
     }
 
@@ -65,30 +49,27 @@ return counter;
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-            int count = 0;
-            int bigCount = 0;
+        int count = 0;
+        int bigCount = 0;
+        int finalcount = 0;
 
-            for (int i=0; i < objectArray.length; i++) {
-                for (int j=0; j < objectArray.length; j++) {
-                    if(objectArray[j] == objectArray[i]) {
-                        count++;
-                    }
-                }
-                if(count > bigCount) {
-                    bigCount = count;
-                    objectArray[i] = bigCount;
+        for (int i = 0; i < objectArray.length; i++) {
+            count = 0;
+            for (int j = 0; j < objectArray.length - 1; j++) {
+                if (objectArray[j] == objectArray[i]) {
+                    count++;
+                    System.out.println("count is --> " + count);
                 }
             }
-            return objectArray;
-
-
-
+            if (count > bigCount) {
+                bigCount = count;
+                finalcount = (Integer) objectArray[i];
+            }
         }
+        //System.out.println("bigCount is --> " + finalcount);
 
-
-
-
-
+        return finalcount;
+    }
 
 
     /**
@@ -97,7 +78,29 @@ return counter;
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
-        return null;
+
+        Integer expected = 2;
+        Integer[] inputArray = {1, 1, 2, 3, 3, 3, 4, 4, 4, 4};
+
+        int count = 0;
+        int bigCount = 1;
+        int finalcount = 0;
+
+        for (int i = 0; i < objectArray.length; i++) {
+            count = 0;
+            for (int j = 0; j < objectArray.length - 1; j++) {
+                if (objectArray[j] == objectArray[i]) {
+                    count++;
+                    System.out.println("count is --> " + count);
+                }
+            }
+            if (count <= bigCount) {
+                bigCount = count;
+                finalcount = (Integer) objectArray[i];
+            }
+        }
+        System.out.println("bigCount is --> " + finalcount);
+        return finalcount;
     }
 
     /**
@@ -107,6 +110,16 @@ return counter;
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+
+        int aLen = objectArray.length;
+        int bLen = objectArrayToAdd.length;
+        Integer[] result = new Integer[aLen + bLen];
+
+        System.arraycopy(objectArray, 0, result, 0, aLen);
+        System.arraycopy(objectArrayToAdd, 0, result, aLen, bLen);
+
+        System.out.println(Arrays.toString(result));
+
+        return result;
     }
 }

@@ -36,6 +36,8 @@ public class ArrayUtilsTest {
         System.out.println("expected   is -->"+ Arrays.toString(expected));
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);
+
+
     }
 
 
@@ -45,8 +47,10 @@ public class ArrayUtilsTest {
         Integer expected = 7;
         Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
 
+        Object array = ArrayUtils.getMostCommon(inputArray);
+
         // When
-        Integer actual = (Integer) ArrayUtils.getMostCommon(inputArray);
+        Integer actual = Integer.parseInt(ArrayUtils.getMostCommon(inputArray).toString());
 
         // Then
         Assert.assertEquals(expected, actual);
