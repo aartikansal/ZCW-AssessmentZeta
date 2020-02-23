@@ -9,20 +9,26 @@ public class Cat extends Pet {
      * @param age age of this Cat
      */
     public Cat(String name, Integer age) {
-        name = name;
-        age = age;
+        this.setPetName(name);
+        this.setPetAge(age);
     }
 
     /**
      * @param age age of this Cat
      */
     public Cat(Integer age) {
+        this.setPetAge(age);
+        this.setPetName("Cat name");
     }
 
     /**
      * @param name name of this Cat
      */
-    public Cat(String name) {
+    public Cat(String name)
+    {
+        this.setPetName(name);
+        this.setPetAge(0);
+        System.out.println("name in class Cat is -->"+name);
 
     }
 
@@ -39,6 +45,6 @@ public class Cat extends Pet {
      * @return meow as a string
      */
     public String speak() {
-        return null;
+        return "Meow";
     }
 }
