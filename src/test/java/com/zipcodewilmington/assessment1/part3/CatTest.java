@@ -82,14 +82,17 @@ public class CatTest {
 
     @Test
     public void speakTest() {
-        // Given
-        Cat cat = new Cat();
-        String expected = "Meow";
-
-        // When
-        String actual = cat.speak();
-
-        // Then
-        Assert.assertEquals(expected, actual);
+        String expectedValue = "Meow";
+        String actualValue = " ";
+        Cat cat1 = new Cat();
+        cat1.speak();
+        actualValue = cat1.speak();
+        Assert.assertEquals(expectedValue, actualValue);
     }
-}
+
+
+
+
+
+    }
+

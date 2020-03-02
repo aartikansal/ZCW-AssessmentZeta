@@ -20,7 +20,8 @@ public abstract class Pet implements Animal {
     /**
      * @param name name of this pet
      */
-    public Pet(String name) {
+    public Pet(String name)
+    {
         this.petName=name;
     }
 
@@ -28,7 +29,8 @@ public abstract class Pet implements Animal {
     /**
      * @param age age of this pet
      */
-    public Pet(int age) {
+    public Pet(int age)
+    {
         this.petAge=age;
     }
 
@@ -44,7 +46,8 @@ public abstract class Pet implements Animal {
     /**
      * @set name of this pet
      */
-    public void setPetName(String petName) {
+    public void setPetName(String petName)
+    {
         this.petName = petName;
     }
 

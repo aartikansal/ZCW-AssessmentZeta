@@ -23,12 +23,13 @@ public class PetTest {
     public void setOwnerTest() {
         // Given
         Pet p = new Dog();
-        PetOwner expected = new PetOwner(null, null);
+        PetOwner expected = new PetOwner("Dog name", p);
 
         // When
         p.setOwner(expected);
-        PetOwner actual = p.getOwner();
 
+        PetOwner actual = p.getOwner();
+        System.out.println("In setOwnerTest the actual is --> "+actual.getName().toString());
         // Then
         Assert.assertEquals(expected, actual);
     }
@@ -38,11 +39,9 @@ public class PetTest {
     public void getOwnerTest() {
         // Given
         Pet p = new Dog();
-        PetOwner expected = new PetOwner(null, p);
-
+        PetOwner expected = new PetOwner(null,p);
         // When
         PetOwner actual = p.getOwner();
-
         // Then
         Assert.assertEquals(expected, actual);
     }

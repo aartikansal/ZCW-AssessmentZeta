@@ -82,13 +82,25 @@ public class DogTest {
     @Test
     public void speakTest() {
         // Given
-        Dog dog = new Dog();
+       /* Dog dog = new Dog();
         String expected = "Bark";
 
         // When
         String actual = dog.speak();
 
         // Then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);*/
+       String expectedValue ="Bark";
+       String actualValue = " ";
+       Dog dog1 = new Dog();
+       dog1.speak();
+       actualValue= dog1.speak();
+       Assert.assertEquals(expectedValue, actualValue);
+
+
+
+
+
     }
+
 }

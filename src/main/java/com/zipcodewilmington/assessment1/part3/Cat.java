@@ -39,12 +39,18 @@ public class Cat extends Pet {
      * age is 0
      */
     public Cat() {
+        this.setPetName("Cat name");
+        this.setPetAge(0);
+
     }
 
     /**
      * @return meow as a string
      */
-    public String speak() {
+    public String speak()
+    {
+
+
         return "Meow";
     }
 }

@@ -17,9 +17,9 @@ public class UnitTestingUtils {
         String actualString = Arrays.toString(actual);
         boolean equality = expectedString.equals(actualString);
 
-        System.out.println("\n\nExpected:\n\t" + expectedString);
+        /*System.out.println("\n\nExpected:\n\t" + expectedString);
         System.out.println("\nActual:\n\t" + actualString);
-        System.out.println("\nEquivalence:\n\t" + equality);
+        System.out.println("\nEquivalence:\n\t" + equality);*/
 
         Assert.assertEquals(expectedString, actualString);
         Assert.assertEquals(expected, actual);
